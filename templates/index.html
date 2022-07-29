@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="jumbotron text-center">
+    <h3>Deneme Bloguna Hoşgeldiniz</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus voluptate dolores tempore vero placeat quidem
+        quibusdam error aut nisi. Magni hic dolorum mollitia, velit itaque iusto est magnam doloribus tempore sit
+        voluptas quidem earum placeat, labore incidunt. Unde earum repellendus pariatur? Illum incidunt quis officiis
+        explicabo expedita. Obcaecati magnam maiores neque laboriosam non veritatis consectetur, dolore quasi, tempore
+        ut quaerat?</p>
+</div>
+<p>
+    {% if request.user.is_authenticated %}
+        Giriş Yapılmış, {{request.user.username}}
+    
+    {% else %}
+    Giriş Yapılmamış
+    {% endif %}
+</p>
+
+
+{% endblock body %}
